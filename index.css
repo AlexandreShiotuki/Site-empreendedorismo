@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5e1;
+    color: #333;
+}
+
+header {
+    background-color: #f9d342;
+    padding: 20px;
+    text-align: center;
+}
+
+.welcome-card {
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+}
+
+.product img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.product h2 {
+    margin: 10px 0;
+    color: #ff6f61;
+}
+
+.product p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.product button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product button:hover {
+    background-color: #ff5a4e;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup form label {
+    margin: 10px 0 5px;
+}
+
+.popup form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.popup form button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup form button:hover {
+    background-color: #ff5a4e;
+}
+
+.confirmation-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirmation-message .checkmark {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.confirmation-message .checkmark::before {
+    content: '✔';
+    color: white;
+    font-size: 24px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(100% - 40px);
+        max-width: calc(100% - 40px);
+    }
+
+    .popup-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .welcome-card {
+        padding: 15px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .product img {
+        width: 100px;
+    }
+
+    .popup-content {
+        width: 90%;
+    }
+}
